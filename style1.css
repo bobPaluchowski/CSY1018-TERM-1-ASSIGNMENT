@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "footer footer footer footer";
+    overflow: hidden;
+    background-color: rgba(226, 134, 49, .7);
+    color: rgb(19, 0, 0);
+}
+
+header {
+    grid-area: header;
+    /* display: inline-block; */
+}
+
+nav {
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+.hamburger {
+    margin-top: -1.8em;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger div {
+    width: 35px;
+    height: 2px;
+    background-color: rgb(19, 0, 0);
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: 2em;
+  }
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    margin-right: 3em;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(19, 0, 0);
+    cursor: pointer;
+    /* position: relative; */
+}
+
+a:hover {
+    color: rgb(153, 107, 84);
+}
+
+a:active {
+    color: gray;
+}
+
+main{
+    grid-area: main;
+    height: 80vh;
+    padding-top: 10rem;
+}
+
+.gallery {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: auto;
+    margin-left: 2em;
+}
+
+.gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    
+}
