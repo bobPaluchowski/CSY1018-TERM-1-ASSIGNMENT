@@ -1,3 +1,8 @@
+:root {
+    --text-color: white;
+    --hover-color: gray;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +16,16 @@ body {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas: "header header header header"
-                         "main main main main"
+                         "main main main aside"
                          "footer footer footer footer";
     overflow: hidden;
-    background-color: rgba(226, 134, 49, .7);
-    color: rgb(19, 0, 0);
+    background-image: url("images/circuitboard.jpg");
+    background-color: rgba(77, 6, 6, .8);
+    color: var(--text-color);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -31,13 +41,13 @@ nav {
 .hamburger {
     margin-top: -1.8em;
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
 
 .hamburger div {
     width: 35px;
     height: 2px;
-    background-color: rgb(19, 0, 0);
+    background-color: var(--text-color);
     margin: 6px 0;
     margin-left: auto;
     margin-right: 2em;
@@ -56,13 +66,13 @@ li {
 a {
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(19, 0, 0);
+    color: var(--text-color);
     cursor: pointer;
     /* position: relative; */
 }
 
 a:hover {
-    color: rgb(153, 107, 84);
+    color: var(--hover-color);
 }
 
 a:active {
@@ -72,7 +82,13 @@ a:active {
 main{
     grid-area: main;
     height: 80vh;
-    padding-top: 10rem;
+    padding-top: 5rem;
+}
+
+aside {
+    grid-area: aside;
+    margin-right: 2em;
+    padding-top: 5rem;
 }
 
 .gallery {
@@ -87,10 +103,16 @@ main{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: .7;
 }
 
 footer {
     grid-area: footer;
     text-align: center;
-    
+}
+
+footer > p {
+    margin-right: 2em;
+    margin-left: 2em;
+    float: right;
 }
