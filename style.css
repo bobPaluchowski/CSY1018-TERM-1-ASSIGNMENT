@@ -102,3 +102,21 @@ footer > p {
     margin-left: 2em;
     float: right;
 }
+
+@media screen and (max-width:600px) {
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        float: right;
+
+    }
+
+    main{
+        padding-top: 1em;
+    }
+
+}
